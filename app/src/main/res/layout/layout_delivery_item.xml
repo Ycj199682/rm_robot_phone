@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:layout_marginTop="10dp"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:id="@+id/tv_delivery"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/background_selector"
+        android:layout_weight="1"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:textSize="24sp" />
+</LinearLayout>

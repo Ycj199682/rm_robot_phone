@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_margin="@dimen/pd_sm"
+            android:text="1."
+            android:textAppearance="?attr/textAppearanceListItem" />
+
+        <TextView
+            android:id="@+id/tv_content_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="rrtyuiop"
+            android:layout_margin="@dimen/pd_sm"
+            android:textAppearance="?attr/textAppearanceListItem" />
+        <ImageView
+            android:id="@+id/iv_to_end_png"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/pd_sm"
+            android:src="@drawable/first_to_end"
+            android:textAppearance="?attr/textAppearanceListItem" />
+        <TextView
+            android:id="@+id/tv_content_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="rrtyuiop"
+            android:layout_margin="@dimen/pd_sm"
+            android:textAppearance="?attr/textAppearanceListItem" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:visibility="gone"
+        android:text="rtyuiofghjkcvbnm,." /> <!-- 默认隐藏 -->
+
+</LinearLayout>

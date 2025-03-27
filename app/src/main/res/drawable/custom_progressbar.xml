@@ -1,0 +1,28 @@
+<!-- res/drawable/custom_progressbar.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 背景 -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="3dp" />
+            <solid android:color="#D3D3D3"/> <!-- 背景颜色 -->
+        </shape>
+    </item>
+    <!-- 二级进度 -->
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="3dp" />
+                <solid android:color="#B0C4DE"/> <!-- 二级进度颜色 -->
+            </shape>
+        </clip>
+    </item>
+    <!-- 进度 -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="3dp" />
+                <solid android:color="#3b5998"/> <!-- 进度颜色 -->
+            </shape>
+        </clip>
+    </item>
+</layer-list>

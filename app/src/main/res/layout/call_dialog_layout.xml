@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TextView for centered message -->
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+            android:text="@string/confirm_call_point"
+        android:textSize="18sp" />
+
+    <!-- Horizontal layout for buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Confirm Button -->
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/confirm" />
+
+        <!-- Cancel Button -->
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/cancel" />
+    </LinearLayout>
+</LinearLayout>

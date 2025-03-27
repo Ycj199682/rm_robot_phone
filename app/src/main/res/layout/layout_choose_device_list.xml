@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minWidth="300dp"
+    android:paddingLeft="20dp"
+    android:paddingTop="15dp"
+    android:background="@drawable/bg_edit_name"
+    android:paddingRight="20dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/net_device_list"
+        android:textColor="#333"
+        android:gravity="center"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/fl_dialog_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_dialog_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:minHeight="80dp"
+        android:layout_gravity="center_horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/net_device_list"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@id/fl_dialog_content"
+        android:gravity="end">
+        <Button
+            android:id="@+id/btn_qrc_add"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_common_button_pressed"
+            android:text="@string/scan_qrc"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ts_sm"
+            app:autoSizeTextType="uniform"/>
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_common_button_inactive"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ts_sm"
+            app:autoSizeTextType="uniform"/>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_common_button_pressed"
+            android:text="@string/confirm"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ts_sm"
+            app:autoSizeTextType="uniform"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

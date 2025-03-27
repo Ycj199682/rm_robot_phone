@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- 设置对话框背景 -->
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+        <!-- 设置对话框内容的背景 -->
+        <item name="android:background">@drawable/dialog_content_background</item>
+    </style>
+    <style name="Theme.ScanActivity" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="android:statusBarColor">@color/black</item>
+        <!-- 其他主题属性 -->
+    </style>
+
+</resources>

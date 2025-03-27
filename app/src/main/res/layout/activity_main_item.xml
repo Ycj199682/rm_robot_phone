@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:id="@+id/ll_device_list_all"
+    android:paddingEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:onClick="onButtonClickedAdapter"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_device_list"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/rounded_background">
+
+        <ImageView
+            android:id="@+id/tv_bg_robot_icon"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/intelligent_forklift"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/tv_device"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:textColor="#FAFAFA"
+            android:layout_gravity="center"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/tv_set_robot_name"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/set_robot_name_pg"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            android:scaleType="centerInside" />
+    </LinearLayout>
+
+</LinearLayout>

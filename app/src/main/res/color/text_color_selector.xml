@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 当 TextView 处于按下状态时，使用新的文本颜色 -->
+    <item android:state_pressed="true" android:color="@color/deep_blue" />
+    <!-- 默认情况下，使用初始文本颜色 -->
+    <item android:color="#000000" />
+</selector>

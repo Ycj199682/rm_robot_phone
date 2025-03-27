@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".FragmentActivity">
+
+    <!-- 主内容布局 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/back_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#E6ECF1"
+            app:titleTextColor="@android:color/white"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <ImageView
+                android:id="@+id/tv_fragment_finish"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/reeturn_finish_log"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/call_title"
+                android:textColor="@color/black"
+                android:textSize="19sp" />
+            <!-- 在这里添加按钮控件 -->
+            <ImageView
+                android:id="@+id/btn_toggle_sidebar"
+                android:layout_width="29dp"
+                android:layout_height="29dp"
+                android:layout_gravity="right"
+                android:padding="6dp"
+                android:visibility="gone"
+                android:layout_marginRight="9dp"
+                android:src="@drawable/icon_basic_meun"/>
+            <ImageView
+                android:id="@+id/iv_charging_logo"
+                android:layout_width="18dp"
+                android:layout_height="15dp"
+                android:visibility="gone"
+                android:layout_marginLeft="-13dp"
+                android:layout_marginRight="2dp"
+                android:layout_gravity="right"
+                android:src="@drawable/bg_charging_logo" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp">
+
+                <ProgressBar
+                    android:id="@+id/battery_level_progress"
+                    android:layout_width="30dp"
+                    android:layout_height="12dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:layout_gravity="center"
+                    android:progressDrawable="@drawable/custom_progressbar"
+                    style="@android:style/Widget.ProgressBar.Horizontal" />
+
+                <TextView
+                    android:id="@+id/battery_percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp"
+                    android:gravity="center" />
+            </FrameLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- 主内容 -->
+        <LinearLayout
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:background="#E6ECF1"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@color/blue"
+            android:layout_below="@id/lv">
+            <TextView
+                android:id="@+id/tv_call_menu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone"
+                android:onClick="clickButton"
+                android:background="@color/blue"
+                android:text="@string/call"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="clickButton"
+                android:id="@+id/tv_auto_menu"
+                android:visibility="gone"
+                android:background="@color/blue"
+                android:text="@string/delivery"
+                android:gravity="center"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="clickButton"
+                android:background="@color/blue"
+                android:visibility="gone"
+                android:text="@string/lift"
+                android:id="@+id/tv_manual_menu"
+                android:gravity="center"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/blue"
+                android:visibility="gone"
+                android:text="@string/route"
+                android:id="@+id/tv_task_list_menu"
+                android:onClick="clickButton"
+                android:gravity="center"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 侧边栏 -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/border_background">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="6dp">
+            <Button
+                android:id="@+id/btn_charge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:padding="5dp"
+                android:textAllCaps="false"
+                android:background="@drawable/border_background"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="@string/text_go_charge"/>
+
+            <Button
+                android:id="@+id/btn_return_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:padding="5dp"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:background="@drawable/border_background"
+                android:text="@string/text_return_flight"/>
+            <Button
+                android:id="@+id/btn_machine_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:padding="5dp"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:background="@drawable/border_background"
+                android:text="robot"/>
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

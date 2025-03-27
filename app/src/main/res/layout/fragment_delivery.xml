@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="fragment.DeliveryFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingClass">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/ll_auto_mode">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/key_delivery_list"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:clipToPadding="false"
+                    android:background="@drawable/border_background"
+                    android:overScrollMode="never"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="8dp"
+                    android:layout_marginLeft="-13dp"
+                    android:paddingEnd="8dp"
+                    android:layout_marginBottom="5dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/border_background">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/delivery_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:clipToPadding="false"
+                        android:paddingTop="20dp"
+                        android:overScrollMode="never"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="16dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_background">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/delivery_choose_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingStart="8dp"
+                    android:layout_weight="5.5"
+                    android:paddingEnd="8dp" />
+
+                <Button
+                    android:layout_width="140dp"
+                    android:layout_height="0dp"
+                    android:id="@+id/delivery_start"
+                    android:text="@string/start"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_normal"
+                    android:textSize="23dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_delivery_null"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_bg_point_null"
+            android:layout_width="217dp"
+            android:layout_height="182dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="140dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/loading_null_point" />
+
+        <TextView
+            android:id="@+id/tv_bg_point_null_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点位信息为空"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_marginTop="-8dp" />
+    </LinearLayout>
+
+</FrameLayout>

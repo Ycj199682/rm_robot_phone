@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_background"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:layout_marginBottom="3dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:textColor="@color/black"
+                    android:text="@string/device_list" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_device_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#383A3C"
+                    android:text="无设备"
+                    app:autoSizeTextType="uniform" />
+
+            </LinearLayout>
+            <ImageButton
+                android:id="@+id/add_device"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:src="@drawable/add_machine"
+                android:padding="8dp"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true" />
+
+            <ImageButton
+                android:id="@+id/set_button"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/icon_basic_setting"
+                android:padding="9dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <TextView
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/device_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:layout_marginTop="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/add_device"
+        tools:ignore="NotSibling" />
+
+
+    <ImageButton
+        android:id="@+id/bt_set_name_ok"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="28dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/bg_bt_change_name"
+        android:onClick="onButtonClicked"
+        android:visibility="gone"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/pg_data_modification_confirmation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.883" />
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

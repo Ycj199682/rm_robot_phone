@@ -1,0 +1,8 @@
+<!-- res/drawable/item_selected_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 被选中时的背景 -->
+    <item android:color="#FF7549"
+        android:state_selected="true" />
+    <!-- 默认背景 -->
+    <item android:color="#595B5E" />
+</selector>
